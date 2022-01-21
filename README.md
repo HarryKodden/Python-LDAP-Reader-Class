@@ -37,12 +37,13 @@ Python Class for reading People and Group tree from LDAP
 The configuration is controlled via environment variables. You can provide them for example via a **.env** file. See example file.
 
 Config | Meaning | Example | default
---- | --- | ---
+--- | --- | --- | ---
 LDAP_HOST | ldap host address | "ldaps://example.org" | none
 LDAP_BASE | ldap base location | "dc=...,dc=example,dc=org" | none
 LDAP_BIND | ldap bind username | "cn=admin,dc=...,dc=example,dc=org" | none
 LDAP_PASS | ldap bind password | "admin-password" | none
-LDAP_MODE | ldap network mode | "IP_V4_ONLY" | IP_V6_PREFERRED
+LDAP_MODE | ldap network mode | "IP_V4_ONLY" | "IP_V6_PREFERRED"
 LDAP_USER_KEY | the attribute identifying a person | "cn | "uid"
 LDAP_GROUP_KEY | the attribute identifying a group | "cn" | "cn"
-LDAP_FILTER | the filter identifying groupmembership | "objectCLass=member" |"objectCLass=groupOfMembers"
+LDAP_FILTER | the filter identifying groupmembership | "objectCLass=member" | "objectCLass=groupOfMembers"
+
